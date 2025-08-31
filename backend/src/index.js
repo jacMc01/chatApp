@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 
 //we need to use the json parser to parse the request body
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/auth", authRoutes);
 
